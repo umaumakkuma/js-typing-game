@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <main>
+    <article class="article-wrap">
+      <h1>タイピングゲーム!!</h1>
+      <div id="js-title-wrap">
+        <p>画面に表示された文字を打つやつ！</p>
+        <p><button id="js-start-btn" class="btn btn--confirm">始める</button></p>
+      </div>
+      <div id="js-question-wrap" class="question-wrap">
+        <p><span id="js-current-word-number"></span> / <span id="js-total-word-number"></span> 問目（正解数：<span id="js-total-correct-word-number">0</span>）</p>
+        <p id="js-type-word" class="type-word"></p>
+        <!-- <p id="js-result-correct" class="result-correct">正解</p>
+        <p id="js-result-incorrect" class="result-incorrect">不正解</p> -->
+        <p><input type="text" id="js-input-answer" value="" class="input-answer"></p>
+        <p><button id="js-confirm-btn" class="btn btn--confirm">確定</button></p>
+        <p><button id="js-next-question-btn" class="btn btn--next btn--hide">次の問題へ</button></p>
+        <p><button id="js-total-result-btn" class="btn btn--next btn--hide">結果を見る</button></p>
+        <div id="js-result-correct" class="result result--correct">正解！</div>
+        <div id="js-result-incorrect" class="result result--incorrect">不正解…</div>
+      </div>
+      <div id="js-total-result-wrap" class="total-result-wrap">
+        <p>Score:<span id="js-total-score"></span></p>
+        <p id="js-total-score-comment"></p>
+      </div>
+    </article>
+  </main>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

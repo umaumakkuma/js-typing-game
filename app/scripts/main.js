@@ -40,22 +40,31 @@
 
       if (typeWord.textContent === str) {
         resultCorrect.classList.add('show');
+        setTimeout(() => {
+          resultCorrect.classList.remove('show');
+        }, 1000);
         totalCorrectNum++;
         totalCorrectWordNumber.textContent = totalCorrectNum;
       } else {
         resultIncorrect.classList.add('show');
+        setTimeout(() => {
+          resultIncorrect.classList.remove('show');
+        }, 1000);
       }
 
       if (currentNum === totalWordNum) {
+
         totalResultBtn.classList.add('show');
         setTimeout(function () {
           totalResultBtn.focus();
         },0);
       } else {
-        nextQuestionBtn.classList.add('show');
-        setTimeout(function () {
-          nextQuestionBtn.focus();
-        },0);
+        currentNum++;
+        initQuestion();
+        // nextQuestionBtn.classList.add('show');
+        // setTimeout(function () {
+        //   nextQuestionBtn.focus();
+        // },0);
       }
     }
 
@@ -63,8 +72,8 @@
       currentWordNumber.textContent = currentNum;
       inputAnswer.value = '';
       inputAnswer.disabled = false;
-      resultCorrect.classList.remove('show');
-      resultIncorrect.classList.remove('show');
+      // resultCorrect.classList.remove('show');
+      // resultIncorrect.classList.remove('show');
       confirmBtn.classList.remove('hide');
       nextQuestionBtn.classList.remove('show');
       typeWord.textContent = createTypeWord();
